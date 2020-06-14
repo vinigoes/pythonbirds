@@ -17,8 +17,15 @@ class Pessoa:
     def nome_e_atributos_de_classe(cls):
         return f'{cls} - olhos {cls.olhos}'
 
+class Homem(Pessoa):
+    pass
+
+class Mutante(Pessoa):
+    olhos = 3
+
+
 if __name__ == '__main__':
-    nicio = Pessoa(nome='Nicio', idade='35')
+    nicio = Mutante(nome='Nicio', idade='35')
     heloise = Pessoa(nicio, nome='Heloise', idade='29')
     print(Pessoa.cumprimentar(nicio))
     print(id(nicio))
@@ -27,10 +34,10 @@ if __name__ == '__main__':
     print(nicio.idade)
     for filho in heloise.filhos:
         print(filho.nome)
-    nicio.olhos = 3
     print(heloise.__dict__)
     print(nicio.__dict__)
     print(nicio.olhos)
     print(heloise.olhos)
     print(Pessoa.metodo_estatico(), nicio.metodo_estatico())
     print(Pessoa.nome_e_atributos_de_classe(), nicio.nome_e_atributos_de_classe())
+    print(nicio.olhos)
