@@ -7,7 +7,7 @@ class Pessoa:
 
 
     def cumprimentar(self):
-        return f'Olá {id(self)} '
+        return f'Olá {self.nome} '
 
     @staticmethod
     def metodo_estatico():
@@ -41,3 +41,4 @@ if __name__ == '__main__':
     print(Pessoa.metodo_estatico(), nicio.metodo_estatico())
     print(Pessoa.nome_e_atributos_de_classe(), nicio.nome_e_atributos_de_classe())
     print(nicio.olhos)
+    print(nicio.cumprimentar())
